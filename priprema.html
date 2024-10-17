@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priprema</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h3>Tablice u HTMLu</h3>   <!-- style="background-color: aquamarine; text-align: left;" -->
+    <table border="1" cellspacing="5">
+        <caption>tablica 1.</caption>
+        <tr>
+            <th>Ponedjeljak</th>
+            <th>Utorak</th>
+            <th>Srijeda</th>
+        </tr>
+        <tr>
+            <td>hrv</td>
+            <td>mat</td>
+            <td>met</td>
+        </tr>
+        <tr>
+            <td>hrv2</td>
+            <td>mat2</td>
+            <td>met2</td>
+        </tr>
+    </table>
+
+    <h3>Colspan i rowspan</h3>
+    <table border="1">
+        <tr>
+          <th colspan="2">Name</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>43</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>57</td>
+        </tr>
+      </table>
+
+      <br>
+
+      <table border="1">
+        <tr>
+          <th>Name</th>
+          <td>Jill</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Phone</th>
+          <td>555-1234</td>
+        </tr>
+        <tr>
+          <td>555-8745</td>
+      </tr>
+      </table>
+
+      <br>
+
+      <table border="1">
+        <tr>
+            <th colspan="3">2022</th>
+        </tr>
+        <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+            <td>lorem</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2"></td>
+            <td>lorem</td>
+        </tr>
+        <tr>
+            <td>lorem</td>
+        </tr>
+        <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+            <td>lorem</td>
+        </tr>
+      </table>
+
+      <h3>Forme</h3>
+      <form action="" method="get">
+        <label for="name">Ime:</label>
+        <input type="text" id="name" placeholder="Unesi ime...">
+        <br>
+        <label for="lname">Prezime:</label>
+        <input type="text" id="lname">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="pass">Pass:</label>
+        <input type="password" id="pass">
+        <label for="color">Boja</label>
+        <input type="color" name="color" id="color">
+        <br>
+        <!-- Kod radio buttona sve različito osim name, to isto -->
+        <label>Choose your favorite language:</label>
+        <input type="radio" id="html" name="predmeti" value="HTML">
+        <label for="html">HTML</label>
+        <input type="radio" name="predmeti" id="css" value="CSS">
+        <label for="css">CSS</label>
+        <br>
+        <!-- Kod checkboxa sve različito -->
+        <label>Danas imamo:</label> <br>
+        <input type="checkbox" id="mat" name="predmet1" value="Matematika">
+        <label for="mat">Matematika</label> <br>
+        <input type="checkbox" name="predmet2" id="sj" value="Skriptni_jezici">
+        <label for="sj">SKriptni jezici</label>
+        <br>
+        <textarea name="textarea" cols="30" rows="10">Unesi tekst...</textarea>
+        <br>
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+          </fieldset>
+        <input type="submit" value="Spremi">
+      </form>
+      <h3>Audio video HTLM5</h3>
+      <audio controls>
+        <source src="assets/horse.ogv" type="audio/ogg">
+        Vaš browser ne podržava audio
+      </audio>
+      <br>
+      <video controls>
+        <source width="320" height="240" src="assets/movie.mp4" type="video/mp4">
+        Vaš browser ne podržava video
+      </video>
+      <br>
+
+</body>
+</html>
