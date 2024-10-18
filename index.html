@@ -68,15 +68,156 @@
     <a href="linkovi/link2.html">Link 2</a>
 
     <h3>Zadaće iz web programiranja:</h3>
-    <ul>
+    <ol>
         <li><a href="zadace/zadaca1.html">Zadaća 1</a></li>
-        <li>Zadaća 2</li>
-        <li>Zadaća 3</li>
-        <li>Zadaća 4</li>
-        <li>Zadaća 5</li>
-        <li>Zadaća 6</li>
-    </ul>
+        <li>Zadaća </li>
+        <li>Zadaća</li>
+        <li>Zadaća </li>
+        <li>Zadaća </li>
+        <li>Zadaća </li>
+    </ol>
 
+    <br>
+
+
+    <!-- Tablice -->
+    <h3>Tablice u HTMLu</h3>
+    <table border="1">
+        <tr>
+            <th>Pon</th>
+            <th>Utorak</th>
+            <th>Srijeda</th>
+        </tr>
+        <tr>
+            <td>Hrv</td>
+            <td>Metodika</td>
+            <td>SJ</td>
+        </tr>
+        <tr>
+            <td>Hrv</td>
+            <td>Metodika</td>
+            <td>SJ</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1">
+        <tr>
+            <th colspan="2">Name</th>
+            <th>lorem</th>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+        <tr>
+            <td>Lorem</td>
+            <td>Lorem</td>
+            <td>Lorem</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1">
+       <tr>
+            <td rowspan="3">APRIL</td>
+            <td>lorem</td>
+            <td>lorem</td>
+       </tr>
+       <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+       </tr>
+       <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+       </tr>
+       <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+            <td>lorem</td>
+       </tr>
+       <tr>
+            <td>lorem</td>
+            <td>lorem</td>
+            <td>lorem</td>
+       </tr>
+    </table>
+
+    <br>
+
+    <!-- HTML forme -->
+    <h3>HTML forme</h3>
+    <form action="" method="get">
+        <label for="name">Unesi svoje ime:</label>
+        <input type="text" id="name" name="name"> <br>
+        <label for="prezime">Unesi prezime:</label>
+        <input type="text" name="prezime" id="prezime" placeholder="unesi prezime..." maxlength="20" size="25"> <br>
+        <label>Unesi password:</label>
+        <input type="password" maxlength="20"> <br>
+        <label>Izaberi boju:</label>
+        <input type="color"> <br>
+        <label>Unesi datum:</label>
+        <input type="date"> <br>
+        <label>Unesi email:</label>
+        <input type="email" required>  <br>
+        <label>Unesi telefon:</label>
+        <input type="tel">  <br>
+        <label>Izaberi najbolji kolegij:</label> <br>
+        <input type="radio" name="kolegij" id="matematika" value="matematika">
+        <label for="matematika">Matematika</label> <br>
+        <input type="radio" name="kolegij" id="hrvatski" value="hrvatski">
+        <label for="hrvatski">Hrvatski</label> <br>
+        <input type="radio" name="kolegij" id="metodika" value="metodika">
+        <label for="metodika">Metodika</label> <br>
+        <label>Najdraže boje:</label> <br>
+        <input type="checkbox" name="boja1" id="boja1">
+        <label for="boja1">Crvena</label> <br>
+        <input type="checkbox" name="boja2" id="boja2">
+        <label for="boja2">Plava</label> <br>
+        <input type="checkbox" name="boja3" id="boja3">
+        <label for="boja3">Zelena</label> <br>
+        <input type="checkbox" name="boja4" id="boja4">
+        <label for="boja4">Žuta</label> <br>
+        <br><br>
+        <h3>Registarcija</h3>
+
+
+        <input type="submit" value="Pošalji">
+
+    </form>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/CHGzTFIWfOk?si=ibXOjWaAU60aP6Zg" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <h3>Audio i video elementi u HTMLu</h3>
+    <video width="320" height="240" controls>
+        <source src="assets/mov_bbb.mp4" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
+    <br>
+    <audio controls>
+        <source src="assets/horse.ogv" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+
+    
 
 </body>
 </html>
