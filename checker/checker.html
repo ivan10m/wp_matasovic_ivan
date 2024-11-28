@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Checker</title>
+</head>
+<body>
+    <h1>Provjera HTML zadatka</h1>
+    <textarea id="htmlInput" rows="10" cols="50" placeholder="Unesite HTML kod ovdje"></textarea>
+    <br>
+    <button onclick="checkHTML()">Provjeri HTML</button>
+    <div id="results"></div>
+
+    <script>
+        function checkHTML() {
+            const parser = new DOMParser();
+            const htmlContent = document.getElementById('htmlInput').value;
+            const doc = parser.parseFromString(htmlContent, 'text/html');
+
+            let results = '';
+
+            // Provjera <title>
+            const title = doc.querySelector('title');
+            results += `<p>Naslov web stranice (<title>): ${title ? 'Postoji' : 'Ne postoji'}</p>`;
+
+            // Provjera <meta> s opisom i imenom autora
+            const metaDescription = doc.querySelector('meta[name="description"]');
+            const metaAuthor = doc.querySelector('meta[name="author"]');
+            results += `<p>Meta opis: ${metaDescription ? 'Postoji' : 'Ne postoji'}</p>`;
+            results += `<p>Meta autor: ${metaAuthor ? 'Postoji' : 'Ne postoji'}</p>`;
+
+            // Provjera naslova (h1-h6)
+            const heading = doc.querySelector('h1, h2, h3, h4, h5, h6');
+            results += `<p>Naslov (h1-h6): ${heading ? 'Postoji' : 'Ne postoji'}</p>`;
+
+            // Provjera <p> s <em> i <strong>
+            const paragraph = doc.querySelector('p');
+            const em = doc.querySelector('em');
+            const strong = doc.querySelector('strong');
+            results += `<p>Paragraf: ${paragraph ? 'Postoji' : 'Ne postoji'}</p>`;
+            results += `<p>Naglašeni elementi (<em> ili <strong>): ${em || strong ? 'Postoje' : 'Ne postoje'}</p>`;
+
+            // Provjera <br> i <hr>
+            const br = doc.querySelector('br');
+            const hr = doc.querySelector('hr');
+            results += `<p>Element <br>: ${br ? 'Postoji' : 'Ne postoji'}</p>`;
+            results += `<p>Element <hr>: ${hr ? 'Postoji' : 'Ne postoji'}</p>`;
+
+            // Provjera liste (ul, ol, dl)
+            const list = doc.querySelector('ul, ol, dl');
+            results += `<p>Lista (ul, ol, dl): ${list ? 'Postoji' : 'Ne postoji'}</p>`;
+
+            // Provjera slika s alt atributom
+            const images = doc.querySelectorAll('img[alt]');
+            results += `<p>Slike s alt atributom: ${images.length > 0 ? 'Postoje' : 'Ne postoje'}</p>`;
+
+            // Provjera linkova
+            const links = doc.querySelectorAll('a');
+            const externalLink = Array.from(links).some(link => link.getAttribute('target') === '_blank');
+            results += `<p>Linkovi: ${links.length >= 2 ? 'Postoje dva ili više' : 'Manje od dva'}</p>`;
+            results += `<p>Linkovi u novom tabu: ${externalLink ? 'Postoje' : 'Ne postoje'}</p>`;
+
+            document.getElementById('results').innerHTML = results;
+        }
+    </script>
+</body>
+</html>
